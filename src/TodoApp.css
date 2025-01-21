@@ -1,0 +1,133 @@
+/* corpo central da pagina */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #DAC8B3;
+}
+
+/* Cor dos botões */
+:root {
+    --primary-color: #0076f5;
+    --primary-hover-color: #0056b3;
+    --danger-color: #DC3545;
+    --danger-hover-color: #a71d2a;
+    --border-radius: 4px;
+    --padding: 10px;
+}
+
+/* corpo da lista */
+.todo-app {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: orange;
+    border-radius: 20px;
+    margin-right: 680px;
+    margin-top: 200px;
+}
+
+/* Título do texto */
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #050505;
+    background-color: orange;
+}
+
+.input-container {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+/* estilização do input */
+.input-container input {
+    padding: var(--padding);
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    flex-grow: 1;
+    background-color: rgb(255, 255, 255);
+}
+
+.input-container button {
+    padding: var(--padding);
+    font-size: 16px;
+    background-color: var(--primary-color);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-container button:hover {
+    background-color: var(--primary-hover-color);
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    background-color: orange;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: var(--border-radius);
+}
+
+.task-item input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.task-item span {
+    flex-grow: 1;
+    font-size: 16px;
+    color: #333;
+    background-color: white;
+}
+
+.task-item span.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-item button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: var(--danger-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.task-item button:hover {
+    background-color: var(--danger-hover-color);
+}
+
+@media (max-width: 600px) {
+    .input-container {
+        flex-direction: column;
+    }
+
+    .input-container input {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .input-container button {
+        width: 100%;
+    }
+}
